@@ -15,7 +15,7 @@ sudo docker build -t dbdev .
 sudo docker run -it --mount type=bind,source=$PWD,target=/home/dbdev dbdev
 
 
-printf "\n  [+]  ${BIGreen} Returning file ownership from root to ${USER}.\n       You may be asked to reenter your password.${NC}\n"
+printf "\n  [+] ${BIGreen} Returning file ownership from root to ${USER}.\n       You may be asked to reenter your password.${NC}\n"
 # change ownership of a file to your own login if it was created in the docker container.
 sudo chown $USER ./*
 
