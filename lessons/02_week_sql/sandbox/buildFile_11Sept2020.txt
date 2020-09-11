@@ -1,0 +1,39 @@
+
+
+DROP TABLE Department;
+CREATE TABLE Department (
+id VARCHAR NOT NULL PRIMARY KEY, dept VARCHAR NOT NULL,
+roomNum VARCHAR NOT NULL
+);
+
+
+
+
+DROP TABLE Tea;
+CREATE TABLE Tea (
+id VARCHAR NOT NULL PRIMARY KEY, tea VARCHAR NOT NULL,
+sandwich VARCHAR NOT NULL
+);
+
+DROP TABLE Session;
+CREATE TABLE Session (
+id VARCHAR NOT NULL PRIMARY KEY,
+session VARCHAR NOT NULL,
+material VARCHAR NOT NULL
+);
+
+
+
+
+/*Table Creation Above in This File*/
+.separator ","
+/*data files */
+.import data/department.csv Department
+.import data/tea.csv Tea
+.import data/session.csv Session
+
+
+
+/* select tea.id, tea.sandwich, session.material, department.roomNum FROM tea, session, department WHERE tea.ID == Session.id and tea.ID == department.ID and Session.id == Department.id; */
+
+/* cat buildFile_11Sept2020.txt | sqlite3 mydb.sqlite3 */
