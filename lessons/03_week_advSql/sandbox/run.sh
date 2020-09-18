@@ -1,3 +1,4 @@
+#!/bin/bash
 # MacOS and Ubuntu container builder and executer
 # Formatting
 GREEN='\033[0;32m'        # Green
@@ -8,14 +9,10 @@ NC='\033[0m' # No Colour
 # Type 'whoami' to see who you are in Linux.
 printf "\n [+] ${BIGreen} Hello ${USER}! Setting up your working container.${NC}\n [+]  ${BIGreen}You may be asked to enter your password.${NC}\n"
 
-# Build container:
-sudo docker build -t dbdev .
+# Run container:
+docker run --rm -it -v $PWD:/root dbdev
 
-# Mount local directory and run container:
-sudo docker run -it --mount type=bind,source=$PWD,target=/home/dbdev dbdev
-
-
-printf "\n  [+] ${BIGreen} Returning file ownership from root to ${USER}.\n       You may be asked to reenter your password.${NC}\n"
+printf "\n  [+]  ${BIGreen} Returning file ownership from root to ${USER}.\n       You may be asked to reenter your password.${NC}\n"
 # change ownership of a file to your own login if it was created in the docker container.
 sudo chown $USER ./*
 
