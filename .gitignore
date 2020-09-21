@@ -1,6 +1,9 @@
 # Mac
 *.DS_Store
 
+# sqlite
+*.sqlite_history
+
 # Dropbox
 *.dropbox/attr
 
