@@ -1,0 +1,19 @@
+DROP TABLE Residence;
+CREATE TABLE Residence (
+ id INT PRIMARY KEY,
+ room VARCHAR,
+ name VARCHAR );
+
+DROP TABLE Guest;
+CREATE TABLE Guest (
+ id INT PRIMARY KEY,
+ firstName VARCHAR,
+ lastName VARCHAR,
+ residence VARCHAR );
+
+
+INSERT INTO Guest VALUES (221,"Sherlock","Holmes","221b Baker Street");
+INSERT INTO Guest VALUES (747,"Amelia","Earhart","1 AirWay Street");
+
+INSERT INTO Residence VALUES (221, 0221, "Holmes");
+INSERT INTO Residence VALUES (747, 0747, "Earhart");
