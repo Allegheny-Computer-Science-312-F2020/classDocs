@@ -17,3 +17,12 @@ ls
 sqlite3
 exit
 exit
+ls -l
+cd src/
+ls -l
+cd ..
+sqlite3
+sqlite3 carsColoursDB.sqlite3
+ls -l
+sqlite3 carsColoursDB.sqlite3
+exit
