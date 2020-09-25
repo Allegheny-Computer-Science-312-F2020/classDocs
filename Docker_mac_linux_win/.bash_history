@@ -27,3 +27,7 @@ ls -l
 exit
 exot
 exit
+ls -l
+sqlite3
+sqlite3
+exit
