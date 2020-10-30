@@ -11,7 +11,7 @@ TODO
 
 #### Answer the following.
 Using the following code to craft your queries,
-`db.employee.find({},{_id:0, yourQueryHere}).pretty()` or `db.employee.find({},{_id:0, yourQueryHere})`, please respond to the following.
+`db.employee.find({},{yourQueryHere})`, `db.employee.find({},{_id:0, yourQueryHere}).pretty()` or `db.employee.find({},{_id:0, yourQueryHere})`, please respond to the following.
 
 
 
